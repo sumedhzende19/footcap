@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
              steps {
-                sh 'aws ecs update-service --cluster sumedhfootcap --service sumedh-footcap-SN --force-new-deployment'
+                sh 'aws ecs update-service --cluster sumedhfootcap --service footcapservice --force-new-deployment'
              }
         }
     }
